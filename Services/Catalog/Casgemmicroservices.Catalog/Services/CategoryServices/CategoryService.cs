@@ -29,7 +29,7 @@ namespace CasgemMicroservices.Catalog.Services.CategoryServices
 
         public async Task<Response<NoContent>> DeleteCategoryAsync(string id)
         {
-            var values = await _categoryCollection.DeleteOneAsync(id);
+            var values = await _categoryCollection.DeleteOneAsync(x=>x.CategoryId==id);
             if (values.DeletedCount > 0)
             {
                 return Response<NoContent>.Success(204);
@@ -58,6 +58,7 @@ namespace CasgemMicroservices.Catalog.Services.CategoryServices
         public async Task<Response<List<ResultCategoryDto>>> GetCategoryListAsync()
         {
             var values = await _categoryCollection.Find(x => true).ToListAsync();
+           // return await _collection.AsQueryable().ToListAsync();
             return Response<List<ResultCategoryDto>>.Success(_mapper.Map<List<ResultCategoryDto>>(values), 200);
         }
 
