@@ -23,7 +23,7 @@ namespace CasgemMicroservices.Catalog.Controllers
             return Ok(values);
         }
 
-        [HttpGet("getCategoryById/{id}")]
+        [HttpGet("getCategoryById/{id}")]   
         public async Task<IActionResult> GetCategoryById(string id)
         {
             var values=await _categoryService.GetCategoryByIdAsync(id);

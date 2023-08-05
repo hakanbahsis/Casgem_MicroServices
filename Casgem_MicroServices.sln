@@ -37,7 +37,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CasgemMicroservices.Payment
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{E1C89E6A-7566-41BD-A2C7-E355836F136E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CasgemMicroservices.Shared", "Shared\CasgemMicroservices.Shared\CasgemMicroservices.Shared.csproj", "{5172EA4A-5175-4457-8B01-CE174D079594}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CasgemMicroservices.Shared", "Shared\CasgemMicroservices.Shared\CasgemMicroservices.Shared.csproj", "{5172EA4A-5175-4457-8B01-CE174D079594}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityServer", "IdentityServer", "{7CCEA1BD-591D-40CF-A3AD-DAB361801456}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Casgem_Microservice.IdentityService", "IdentityServer\Casgem_Microservice.IdentityService\Casgem_Microservice.IdentityService.csproj", "{9304A841-8060-49CE-BE00-095B43F9BCCC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +77,10 @@ Global
 		{5172EA4A-5175-4457-8B01-CE174D079594}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5172EA4A-5175-4457-8B01-CE174D079594}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5172EA4A-5175-4457-8B01-CE174D079594}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9304A841-8060-49CE-BE00-095B43F9BCCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9304A841-8060-49CE-BE00-095B43F9BCCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9304A841-8060-49CE-BE00-095B43F9BCCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9304A841-8060-49CE-BE00-095B43F9BCCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -91,6 +99,7 @@ Global
 		{A87D8370-37CE-4C34-B220-6B14C1068862} = {56A42C21-611E-413B-A968-A16E8B113E32}
 		{E0FAE65D-7CBF-4BBF-BA1F-5467F276BB77} = {08444BF8-7488-4847-AE2D-42C12CCCB930}
 		{5172EA4A-5175-4457-8B01-CE174D079594} = {E1C89E6A-7566-41BD-A2C7-E355836F136E}
+		{9304A841-8060-49CE-BE00-095B43F9BCCC} = {7CCEA1BD-591D-40CF-A3AD-DAB361801456}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {62F686AD-908D-41D4-81A2-655334AF1966}

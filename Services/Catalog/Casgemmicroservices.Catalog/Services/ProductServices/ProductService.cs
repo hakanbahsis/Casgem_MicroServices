@@ -30,7 +30,7 @@ namespace CasgemMicroservices.Catalog.Services.ProductServices
 
         public async Task<Response<NoContent>> DeleteProductAsync(string id)
         {
-            var values = await _productCollection.DeleteOneAsync(id);
+            var values = await _productCollection.DeleteOneAsync(x=>x.ProductId==id);
             if (values.DeletedCount > 0)
             {
                 return Response<NoContent>.Success(204);
@@ -44,7 +44,7 @@ namespace CasgemMicroservices.Catalog.Services.ProductServices
         public async Task<Response<ResultProductDto>> GetProductByIdAsync(string id)
         {
             var values = await _productCollection.Find(x => x.ProductId == id).FirstOrDefaultAsync();
-            if (values != null)
+            if (values == null)
             {
                 return Response<ResultProductDto>.Fail("Product bulunamadı!", 404);
             }
