@@ -27,9 +27,10 @@ namespace Casgem_Microservice.IdentityService
                    new IdentityResource[]
                    {
                        new IdentityResources.Email(),
-                new IdentityResources.OpenId(),
-                new IdentityResources.Profile(),
-                new IdentityResource(){Name="roles",DisplayName="Roles",Description="Kullanıcı Rolleri",UserClaims=new []{"role"}}
+                        new IdentityResources.OpenId(),
+                    new IdentityResources.Profile(),
+                    new IdentityResource(){Name="roles",DisplayName="Roles",
+                    Description="Kullanıcı Rolleri",UserClaims=new []{"role"}}
                    };
 
         public static IEnumerable<ApiScope> ApiScopes =>
@@ -59,7 +60,8 @@ namespace Casgem_Microservice.IdentityService
                     AllowedGrantTypes = GrantTypes.ClientCredentials,
                     ClientSecrets = { new Secret("secret".Sha256()) },
 
-                    AllowedScopes = { "photostock_fullpermission" , "catalog_fullpermission",IdentityServerConstants.LocalApi.ScopeName },
+                    AllowedScopes = { "photostock_fullpermission" , 
+                                        "catalog_fullpermission",IdentityServerConstants.LocalApi.ScopeName },
 
                 },
 
@@ -73,9 +75,13 @@ namespace Casgem_Microservice.IdentityService
 
                     AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
 
-                    AllowedScopes = { "catalog_fullpermission", "photostock_fullpermission", 
-                        "basket_fullpermission", "discount_fullpermission",
-                        "order_fullpermission","cargo_fullpermission","payment_fullpermission",
+                    AllowedScopes = { "catalog_fullpermission", 
+                        "photostock_fullpermission", 
+                        "basket_fullpermission", 
+                        "discount_fullpermission",
+                        "order_fullpermission",
+                        "cargo_fullpermission",
+                        "payment_fullpermission",
                         IdentityServerConstants.StandardScopes.Email,
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
